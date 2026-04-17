@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --blue: rgb(0, 21, 56);
+    --blue-dark: rgb(0, 15, 41);
+
+}
+
+
+body{
+    background-color: var(--blue);
+}
+
+header {
+
+    background-color: var(--blue);
+}
+
+
