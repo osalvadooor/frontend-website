@@ -8,17 +8,30 @@
 :root {
     --blue: rgb(0, 21, 56);
     --blue-dark: rgb(0, 15, 41);
-
 }
 
 
-body{
+body {
     background-color: var(--blue);
+
 }
 
 header {
-
     background-color: var(--blue);
 }
 
+ul i {
+    color: white;
+}
 
+div.icons {
+    height: 44px;
+    width: 100%;
+    background-color: var(--blue-dark)
+}
+
+nav {
+    background-color: var(--blue);
+    height: 76px;
+    width: 100%;
+}
