@@ -1,37 +1,63 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-    --blue: rgb(0, 21, 56);
-    --blue-dark: rgb(0, 15, 41);
+  --blue: rgb(0, 21, 56);
+  --blue-dark: rgb(0, 15, 41);
+  --blue-light: rgb(0, 15, 150);
 }
 
-
 body {
-    background-color: var(--blue);
-
+  background-color: var(--blue-light);
 }
 
 header {
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 ul i {
-    color: white;
+  color: white;
 }
 
 div.icons {
-    height: 44px;
-    width: 100%;
-    background-color: var(--blue-dark)
+  height: 44px;
+  width: 100%;
+  background-color: var(--blue-dark);
 }
 
-nav {
-    background-color: var(--blue);
-    height: 76px;
-    width: 100%;
+.navbar {
+  background-color: var(--blue);
+  height: 76px;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  font-size: 16px;
+  list-style: none;
+  gap: 15px;
+  /* align-items: center; */
+  background-color: red;
+}
+
+.nav-text {
+  display: flex;
+  font-size: 16px;
+  list-style: none;
+  gap: 15px;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+.navbar ul li a {
+  text-decoration: none;
+
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
 }
