@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --page-blue-top: #1a4b95;
+  --page-blue-bottom: #001a4b;
+  --nav-blue: #001538;
+  --utility-blue: #07132e;
+  --text-white: #f6f8ff;
+  --text-soft: rgba(246, 248, 255, 0.86);
+  --button-yellow: #f4c760;
+  --button-white: #ffffff;
+  --button-text: #08245f;
+  --card-shadow: 0 12px 30px rgba(0, 8, 28, 0.2);
+  --container-width: 1248px;
+  --container-height: 76px;
+}
 
 * {
   margin: 0;
@@ -6,58 +19,225 @@
   box-sizing: border-box;
 }
 
-:root {
-  --blue: rgb(0, 21, 56);
-  --blue-dark: rgb(0, 15, 41);
-  --blue-light: rgb(0, 15, 150);
+html {
+  height: 100%;
 }
 
 body {
-  background-color: var(--blue-light);
-}
-
-header {
-  background-color: var(--blue);
-}
-
-ul i {
-  color: white;
-}
-
-div.icons {
-  height: 44px;
-  width: 100%;
-  background-color: var(--blue-dark);
-}
-
-.navbar {
-  background-color: var(--blue);
-  height: 76px;
-  width: 100%;
-}
-
-.navbar ul {
-  display: flex;
-  font-size: 16px;
-  list-style: none;
-  gap: 15px;
-  /* align-items: center; */
-  background-color: red;
-}
-
-.nav-text {
-  display: flex;
-  font-size: 16px;
-  list-style: none;
-  gap: 15px;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-}
-
-.navbar ul li a {
-  text-decoration: none;
-
-  color: #ffffff;
+  min-height: 100%;
   font-family: "DM Sans", sans-serif;
-  font-weight: 400;
+  color: var(--text-white);
+  background: linear-gradient(180deg, #113f7f 15%, rgba(0, 21, 56, 0) 26rem), #001538;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+
+  list-style: none;
+}
+
+.container {
+  width: min(var(--container-width), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: relative;
+}
+
+.utility-bar {
+  background-color: var(--utility-blue);
+}
+
+.utility-bar__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 44px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  color: var(--text-white);
+  font-size: 1.25rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  opacity: 0.75;
+}
+
+.social-links__alienware {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-bar {
+  background-color: var(--nav-blue);
+}
+
+.nav-bar__inner {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  height: 75px;
+}
+
+
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  color: var(--text-white);
+}
+
+.brand-mark svg {
+  width: 84px;
+  height: auto;
+}
+
+.main-nav {
+  flex: 1 1 auto;
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.main-nav__list a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-nav__caret,
+.main-nav__arrow {
+  color: rgb(141, 141, 141);
+  font-size: 0.78em;
+}
+
+.account-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 10px;
+  background-color: var(--button-yellow);
+  color: var(--button-text);
+  font-weight: 700;
+}
+
+.page {
+  padding: 51px 0 56px;
+}
+
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  aspect-ratio: 1228 / 686;
+  box-shadow: var(--card-shadow);
+  background-color: var(--button-text);
+}
+
+.hero-card__image, .hero-card__shade {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-card__shade {
+  background:
+    linear-gradient(90deg, rgba(7, 16, 40, 0.46) 0%, rgba(7, 16, 40, 0.18) 30%, rgba(7, 16, 40, 0.36) 100%),
+    linear-gradient(180deg, rgba(4, 11, 31, 0.08) 0%, rgba(4, 11, 31, 0.62) 100%);
+}
+
+.hero-card__content {
+  position: absolute;
+  left: 42px;
+  bottom: 38px;
+  z-index: 1;
+  width: min(440px, calc(100% - 132px));
+}
+
+.hero-card__title {
+  margin: 0 0 10px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 4rem;
+  line-height: 0.92;
+  font-weight: 800;
+}
+
+.hero-card__description {
+  margin: 0 0 26px;
+
+  color: var(--text-soft);
+}
+
+.hero-card__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 50px;
+  padding: 0 26px;
+  border-radius: 10px;
+  background-color: var(--button-white);
+  color: var(--button-text);
+  font-weight: 700;
+}
+
+.hero-card__button span {
+  font-size: 1.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-card__pagination {
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-card__dot {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--text-white);
+  border-radius: 50%;
+}
+
+.hero-card__dot--active {
+  width: 38px;
+  height: 8px;
+  border-radius: 1000px;
+  background-color: var(--text-white);
+}
+
+
+@media screen {
+
 }
