@@ -24,7 +24,7 @@ body {
   min-height: 100%;
   font-family: "DM Sans", sans-serif;
   color: var(--branco-texto);
-  background: linear-gradient(180deg, #113f7f 5%, rgba(0, 9, 29, 0.973) 100%), #011536;
+  background: linear-gradient(180deg, #113f7f 15%, rgba(0, 21, 56, 0) 100%), #001538;
   background-repeat: no-repeat;
 }
 
@@ -125,7 +125,7 @@ ul {
 .seta-menu,
 .seta-link {
   color: rgb(141, 141, 141);
-  font-size: 0.8em;
+  font-size: 0.78em;
 }
 
 .botao-conta {
@@ -163,6 +163,12 @@ ul {
   height: 100%;
 }
 
+.imagem-destaque {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
 .sombra-destaque {
   background: linear-gradient(180deg, rgba(7, 16, 40, 0.14) 0%, rgba(4, 11, 31, 0.62) 100%);
@@ -174,9 +180,17 @@ ul {
   right: 90px;
   bottom: 38px;
   z-index: 1;
+  max-width: min(440px, 42vw);
+}
+
+.titulo-destaque {
+  margin: 0 0 10px;
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 2.5rem;
-  line-height: 1;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 0.92;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .titulo-destaque-complemento {
@@ -294,8 +308,7 @@ ul {
   }
 
   .card-destaque {
-    min-height: 472px;
-    padding-top: 250px;
+    padding-top: 280px;
     border-radius: 8px;
     aspect-ratio: auto;
     background-color: #113f7f;
@@ -317,19 +330,23 @@ ul {
     bottom: auto;
     z-index: 2;
     max-width: none;
-    padding: 0px 16px 18px;
+    padding: 20px 16px 18px;
     background-color: #113f7f;
   }
 
   .titulo-destaque {
     margin-bottom: 14px;
-    font-size: 2rem;
-    line-height: 1;
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    line-height: 0.95;
     max-width: 100%;
   }
 
+  .titulo-destaque-complemento {
+    display: inline;
+  }
+
   .descricao-destaque {
-    margin: 20px 0px;
+    margin-bottom: 20px;
     font-size: 1.02rem;
     line-height: 1.45;
     font-family: "DM Sans", Arial, sans-serif;
@@ -363,3 +380,4 @@ ul {
     height: 8px;
   }
 }
+
