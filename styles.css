@@ -145,7 +145,7 @@ ul {
 }
 
 .page {
-  padding: 51px 0 56px;
+  padding: 50px 0 0;
 }
 
 .hero-card {
@@ -236,6 +236,8 @@ ul {
   border-radius: 1000px;
   background-color: var(--text-white);
 }
+
+
 
 
 @media screen {
