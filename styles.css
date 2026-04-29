@@ -308,7 +308,8 @@ ul {
   }
 
   .card-destaque {
-    padding-top: 280px;
+    padding-top: 200px;
+    min-height: 472px;
     border-radius: 8px;
     aspect-ratio: auto;
     background-color: #113f7f;
@@ -380,4 +381,3 @@ ul {
     height: 8px;
   }
 }
-
