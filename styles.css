@@ -1,6 +1,8 @@
+/* Variáveis principais de cor e largura base do layout */
 :root {
   --azul-menu: #001538;
   --azul-superior: #07132e;
+  --azul-destaque: #113f7f;
   --branco-texto: #f6f8ff;
   --texto-suave: rgba(246, 248, 255, 0.86);
   --amarelo-botao: #f4c760;
@@ -24,7 +26,7 @@ body {
   min-height: 100%;
   font-family: "DM Sans", sans-serif;
   color: var(--branco-texto);
-  background: linear-gradient(180deg, #113f7f 15%, rgba(0, 21, 56, 0) 100%), #001538;
+  background: linear-gradient(180deg, var(--azul-destaque) 15%, var(--azul-menu) 26rem), var(--azul-menu);
   background-repeat: no-repeat;
 }
 
@@ -38,6 +40,7 @@ ul {
   list-style: none;
 }
 
+/* Centraliza o conteúdo e evita que ele fique largo demais em telas grandes */
 .container-principal {
   width: 100%;
   max-width: var(--largura-container);
@@ -146,6 +149,7 @@ ul {
   padding: 50px 0 0;
 }
 
+/* Card principal do destaque; fica relative para servir de base para imagem, sombra e texto */
 .card-destaque {
   position: relative;
   overflow: hidden;
@@ -170,6 +174,7 @@ ul {
   object-fit: cover;
 }
 
+/* Essa camada escura ajuda o texto a ficar legível em cima da imagem assim como no original */
 .sombra-destaque {
   background: linear-gradient(180deg, rgba(7, 16, 40, 0.14) 0%, rgba(4, 11, 31, 0.62) 100%);
 }
@@ -221,6 +226,7 @@ ul {
   line-height: 1;
 }
 
+/* Paginação posicionada dentro do card, sobre a imagem */
 .paginacao-destaque {
   position: absolute;
   right: 35px;
@@ -245,6 +251,7 @@ ul {
   background-color: var(--branco-texto);
 }
 
+/* Ajustes específicos da versão mobile */
 @media (max-width: 414px) {
   .barra-superior {
     display: none;
@@ -277,14 +284,17 @@ ul {
     display: none;
   }
 
+
+  /* No mobile a logo fica centralizada e os outros elementos ocupam as laterais */
   .logo-site {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
   }
 
   .logo-site svg {
     width: 44px;
+
   }
 
   .botao-conta {
@@ -312,7 +322,7 @@ ul {
     min-height: 472px;
     border-radius: 8px;
     aspect-ratio: auto;
-    background-color: #113f7f;
+    background-color: var(--azul-destaque);
   }
 
   .imagem-destaque,
@@ -332,7 +342,12 @@ ul {
     z-index: 2;
     max-width: none;
     padding: 20px 16px 18px;
-    background-color: #113f7f;
+    background-color: var(--azul-destaque);
+    margin-top: 16px;
+  }
+
+  .descricao-destaque{
+    margin-top: 25px;
   }
 
   .titulo-destaque {
@@ -354,8 +369,10 @@ ul {
   }
 
   .botao-destaque {
+    margin-top: 20px;
+
     min-height: 46px;
-    padding: 0 22px;
+    padding: 0 20px;
     gap: 12px;
     font-size: 1.1rem;
   }
@@ -365,7 +382,7 @@ ul {
   }
 
   .paginacao-destaque {
-    top: 200px;
+    top: 190px;
     right: 16px;
     bottom: auto;
     gap: 8px;
