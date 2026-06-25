@@ -50,16 +50,38 @@ async function buscarJogos() {
         });
 
         mostrarResultados(jogosFiltrados);
-
     }
 
     catch (erro) {
-
         mensagemErro.textContent =
             "Não foi possível consultar a API.";
 
         console.error(erro);
-
     }
+
+}
+
+// Mostrar resultados da busca
+
+function mostrarResultados(jogos) {
+
+    if (jogos.length === 0) {
+        resultados.innerHTML =
+            "<p>Nenhum jogo encontrado.</p>";
+
+        return;
+    }
+
+    jogos.forEach(function (jogo) {
+
+        resultados.innerHTML += `
+            <div class="card-jogos">
+                <img src="${jogo.thumbnail}" alt="${jogo.title}">
+                <h3>${jogo.title}</h3>
+                <p>Gênero: ${jogo.genre}</p>
+                <p>Plataforma: ${jogo.platform}</p>
+            </div>
+        `;
+    });
 
 }
